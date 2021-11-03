@@ -3838,6 +3838,10 @@ body.ie ._ibg img {
   .tabs-step-two__item {
     font-size: 12px;
   }
+
+  .tabs-step-two__item._active {
+    color: #ff000a;
+  }
 }
 
 @media (max-width: 650px) {
