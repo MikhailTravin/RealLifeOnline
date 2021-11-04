@@ -793,7 +793,51 @@ animate({
 			Element.prototype.msMatchesSelector;
 	}
 })();
+let blogItems = document.querySelectorAll('.portfolio__column');
+if (blogItems.length > 0) {
+	let blogFilters = document.querySelectorAll('.portfolio__filter');
+	if (blogFilters.length > 0) {
+		for (let index = 0; index < blogFilters.length; index++) {
+			const blogFilter = blogFilters[index];
+			blogFilter.addEventListener("click", function (e) {
+				e.preventDefault();
+				const blogFilterValue = blogFilter.dataset.filter;
+				const blogFilterActive = document.querySelector('.portfolio__filter._active');
+				blogFilterActive.classList.remove('_active');
+				blogFilter.classList.add('_active');
 
+				showBlogItems(blogFilterValue);
+			});
+		}
+		function showBlogItems(filter) {
+			for (let index = 0; index < blogItems.length; index++) {
+				const blogItem = blogItems[index];
+				if (filter === 'all' || !filter) {
+					blogItem.classList.remove('_hide');
+				} else {
+					blogItem.classList.add('_hide');
+					if (blogItem.classList.contains('portfolio__column_' + filter)) {
+						blogItem.classList.remove('_hide');
+					}
+				}
+			}
+		}
+	}
+}
+
+//========================================================================================================================================================
+
+let fileInput = document.querySelector('.add-file__input');
+if (fileInput) {
+	let fileName = document.querySelector('.add-file__name');
+	fileInput.addEventListener("change", function (e) {
+		if (fileInput.value) {
+			fileName.innerHTML = fileInput.value;
+		}
+	});
+}
+
+//========================================================================================================================================================
 //let btn = document.querySelectorAll('button[type="submit"],input[type="submit"]');
 let forms = document.querySelectorAll('form');
 if (forms.length > 0) {
@@ -1302,19 +1346,17 @@ if (priceSlider) {
 		connect: [true, false],
 		range: {
 			'min': [0],
-			'max': [700000]
+			'max': [50000]
 		},
 		format: wNumb({
 			decimals: 0,
 		})
 	});
-
-	/*
+	
 	const priceStart = document.getElementById('price-start');
 	const priceEnd = document.getElementById('price-end');
 	priceStart.addEventListener('change', setPriceValues);
 	priceEnd.addEventListener('change', setPriceValues);
-	*/
 
 	function setPriceValues() {
 		let priceStartValue;
@@ -2033,6 +2075,8 @@ function mapInit(n = 1) {
 if (document.querySelector('#map')) {
 	mapAdd();
 }
+
+//========================================================================================================================================================
 
 
 /* YA
