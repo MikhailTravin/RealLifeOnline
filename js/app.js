@@ -1352,7 +1352,7 @@ if (priceSlider) {
 			decimals: 0,
 		})
 	});
-	
+
 	const priceStart = document.getElementById('price-start');
 	const priceEnd = document.getElementById('price-end');
 	priceStart.addEventListener('change', setPriceValues);

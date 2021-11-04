@@ -3310,6 +3310,7 @@ body.ie ._ibg img {
 
 .design__body {
   position: relative;
+  min-height: 264px;
 }
 
 .design__bg {
