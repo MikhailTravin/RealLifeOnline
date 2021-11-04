@@ -3,56 +3,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;
 
 500;600;700;800&display=swap&subset=cyrillic-ext");
-@font-face {
-  font-family: "icons";
-  font-display: swap;
-  src: url("../fonts/icons.woff") format("woff"), url("../fonts/icons.woff2#icons") format("woff2");
-  font-weight: normal;
-  font-style: normal;
-  font-display: block;
-}
-
-[class^=_icon-]:before,
-[class*=" _icon-"]:before {
-  font-family: "icons";
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-[class^=_icon-]:before,
-[class*=" _icon-"]:before {
-  display: block;
-}
-
-._icon-calculator:before {
-  content: "\e901";
-}
-
-._icon-calculator-button:before {
-  content: "\e902";
-}
-
-._icon-logo:before {
-  content: "\e903";
-}
-
-._icon-tel-header:before {
-  content: "\e904";
-}
-
-._icon-time:before {
-  content: "\e905";
-}
-
-._icon-time-hand:before {
-  content: "\e906";
-}
-
 * {
   padding: 0px;
   margin: 0px;
