@@ -2153,11 +2153,11 @@ body.content_box_visible .sm-popup {
 }
 
 .cards-step-one__rating {
-  margin: 30px 0px 0px 0px;
+  margin: 30px 0px 0px 23px;
 }
 
 .rating__range img {
-  width: 388px;
+  width: 375px;
   -o-object-fit: cover;
      object-fit: cover;
   mix-blend-mode: screen;
@@ -2839,10 +2839,10 @@ body.content_box_visible .sm-popup {
  */
 
 .noUi-target {
-  width: 388px;
+  width: 375px;
   height: 2px;
   background-color: #cbcbcb;
-  margin: 0px 3px 13px;
+  margin: 0px 23px 13px 0px;
   position: relative;
   z-index: 20;
   border-radius: 3px;
@@ -3084,9 +3084,20 @@ body.content_box_visible .sm-popup {
 }
 
 .noui__value-input {
-  max-width: 45px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   text-align: center;
-  width: auto;
+  color: #0000006d;
+  font-size: 12px;
+  font-weight: 600;
+  max-width: 40px;
   border: none;
   outline: none;
 }
@@ -5387,6 +5398,10 @@ body.content_box_visible .sm-popup {
     margin: 0px 0px 20px 0px;
   }
 
+  .cards-step-one__rating {
+    margin: 30px 15px 0px 15px;
+  }
+
   .description-step-one__column {
     margin: 0px 20px 30px 0px;
   }
@@ -5458,6 +5473,10 @@ body.content_box_visible .sm-popup {
   .form-step-three__button {
     width: 100%;
     min-height: 50px;
+  }
+
+  .noUi-tooltip {
+    padding: 3px;
   }
 
   .portfolio__row {
