@@ -839,6 +839,7 @@ if (fileInput) {
 
 //========================================================================================================================================================
 
+
 //let btn = document.querySelectorAll('button[type="submit"],input[type="submit"]');
 let forms = document.querySelectorAll('form');
 if (forms.length > 0) {
@@ -1353,7 +1354,7 @@ if (priceSlider) {
 			decimals: 0,
 		})
 	});
-	
+
 	let tooltip = document.querySelector('.noUi-tooltip')
 	let page = document.querySelector('.page')
 
@@ -1381,7 +1382,6 @@ if (priceSlider) {
 			priceSlider.noUiSlider.set(new_input.value);
 		})
 	}
-	priceSlider.noUiSlider.on('change', update_input_value)
 	/*
 	const priceStart = document.getElementById('price-start');
 	const priceEnd = document.getElementById('price-end');
