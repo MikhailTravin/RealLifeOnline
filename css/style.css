@@ -2306,16 +2306,20 @@ body.content_box_visible .sm-popup {
 }
 
 .code-step-one__item {
-  margin: 0px 0px 30px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: -9px;
+}
+
+.code-step-one__column {
+  padding: 9px;
 }
 
 .code-step-one__form {
   position: relative;
-  margin: 0px 18px 0px 0px;
-}
-
-.code-step-one__form:last-child {
-  margin: 0px 0px 0px 0px;
 }
 
 .code-step-one__input {
@@ -2365,6 +2369,7 @@ body.content_box_visible .sm-popup {
   color: #53505071;
   font-size: 14px;
   font-weight: 600;
+  margin: 30px 0px 0px 0px;
   padding: 20px 25px 20px 25px;
 }
 
