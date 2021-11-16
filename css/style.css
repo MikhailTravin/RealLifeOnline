@@ -248,6 +248,16 @@ body._lock {
 .select__option {
   cursor: pointer;
   margin: 0px 0px 12px 0px;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.select__option:hover {
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  color: rgba(0, 0, 0, 0.66);
 }
 
 .select__option:last-child {
@@ -2120,10 +2130,182 @@ body.content_box_visible .sm-popup {
 }
 
 .steps__image {
+  position: relative;
   -webkit-box-flex: 0;
       -ms-flex: 0 1 411px;
           flex: 0 1 411px;
   margin: 100px 0px 0px 50px;
+}
+
+.puls-button {
+  position: absolute;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.puls-button.hidden {
+  display: none;
+}
+
+.puls-button .item {
+  position: relative;
+  height: 20px;
+  width: 20px;
+  background: #ff000a;
+  border-radius: 100%;
+  opacity: 0.5;
+}
+
+.puls-button .item:before,
+.puls-button .item:after {
+  border: 1px solid #ff000a;
+  content: "";
+  width: 100%;
+  display: block;
+  position: absolute;
+  height: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 100%;
+  -webkit-transform-origin: center center;
+      -ms-transform-origin: center center;
+          transform-origin: center center;
+  opacity: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.puls-button .item:before {
+  -webkit-animation: 1s 0.1s pulse2 infinite linear;
+          animation: 1s 0.1s pulse2 infinite linear;
+}
+
+.puls-button .item::after {
+  -webkit-animation: 1s pulse infinite linear;
+          animation: 1s pulse infinite linear;
+}
+
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-transform: scale(2);
+            transform: scale(2);
+    opacity: 0.2;
+  }
+
+  100% {
+    -webkit-transform: scale(2.3);
+            transform: scale(2.3);
+    opacity: 0;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    -webkit-transform: scale(2);
+            transform: scale(2);
+    opacity: 0.2;
+  }
+
+  100% {
+    -webkit-transform: scale(2.3);
+            transform: scale(2.3);
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes pulse2 {
+  0% {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+    opacity: 0.5;
+  }
+
+  100% {
+    -webkit-transform: scale(1.8);
+            transform: scale(1.8);
+    opacity: 0;
+  }
+}
+
+@keyframes pulse2 {
+  0% {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+    opacity: 0.5;
+  }
+
+  100% {
+    -webkit-transform: scale(1.8);
+            transform: scale(1.8);
+    opacity: 0;
+  }
+}
+
+.puls-button .info {
+  position: absolute;
+  top: -200%;
+  left: -100%;
+}
+
+/* Координаты пульсирующих кнопок */
+
+/* Бесконтактный чип */
+
+.puls-button.p1 {
+  top: 76px;
+  left: 40px;
+}
+
+/* Печать переменных данных */
+
+.puls-button.p2 {
+  top: 100px;
+  left: 310px;
+}
+
+/* Эмбоссирование */
+
+.puls-button.p3 {
+  top: 215px;
+  left: 345px;
+}
+
+/* Фольгирование принтом */
+
+.puls-button.p4 {
+  top: 215px;
+  left: 60px;
+}
+
+/* Штрих код */
+
+.puls-button.p5 {
+  top: 520px;
+  left: 325px;
+}
+
+/* Магнитная полоса */
+
+.puls-button.p6 {
+  top: 370px;
+  left: 200px;
+}
+
+/* Полоса для подписи */
+
+.puls-button.p7 {
+  top: 435px;
+  left: 95px;
+}
+
+/* QR-Код */
+
+.puls-button.p8 {
+  top: 520px;
+  left: 45px;
 }
 
 .step-one__text {

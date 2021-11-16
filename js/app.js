@@ -839,7 +839,17 @@ if (fileInput) {
 
 //========================================================================================================================================================
 
+let pulsation_buttons = document.querySelectorAll('.puls-button')
 
+function toggle_pulsation(item) {
+	pulsation_buttons.forEach((button) => {
+		let data_item = parseInt(button.getAttribute('data-pulsation-item'))
+
+		if (item === data_item) {
+			button.classList.toggle('hidden')
+		}
+	})
+}
 //let btn = document.querySelectorAll('button[type="submit"],input[type="submit"]');
 let forms = document.querySelectorAll('form');
 if (forms.length > 0) {
